@@ -5,7 +5,7 @@
 1. Send and receive messages
 2. Show current connection count
 
-## What i'm using
+## What i'm using (Stack)
 
 1. [Fastify](https://fastify.dev/) - Backend
 2. [Websockets](https://socket.io/) - RealTime
@@ -16,3 +16,15 @@
 7. [GitHub Actions](https://docs.github.com/fr/actions) - CI/CD
 8. [DigitalOcean](https://www.digitalocean.com/) - Hosting Backend
 9. [Vercel](https://vercel.com/.com) - Hosting Frontend
+
+## Server Side (Fastify, Socket.IO, Redis)
+
+1. install node_modules
+   > `npm install`
+2. run server for dev
+   > `npm run dev`
+3. build for production
+
+   > `npm run build`
+
+   production artifact is created in build folder.
