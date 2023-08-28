@@ -38,9 +38,12 @@ services:
     image: caddy/caddy:2.7.3-alpine
     container_name: caddy-server
     restart: unless-stopped
+    networks:
+      - caddy
     ports:
       - "80:80"
       - "433:433"
+      - "443:443/udp"
     volumes:
       - $PWD/Caddyfile:/etc/caddy/Caddyfile
       - $PWD/site:/srv
