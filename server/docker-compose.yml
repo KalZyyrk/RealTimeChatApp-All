@@ -41,7 +41,6 @@ services:
     ports:
       - "80:80"
       - "433:433"
-      - "433:433/udp"
     volumes:
       - $PWD/Caddyfile:/etc/caddy/Caddyfile
       - $PWD/site:/srv
