@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { count } from "console";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import io, { Socket } from "socket.io-client";
 

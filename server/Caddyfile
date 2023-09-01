@@ -2,8 +2,8 @@
   debug
 }
 
-api.chat.ulysse-dev.me {
-    reverse_proxy chat-app-1_1:3001 chat-app-2_1:4000 chat-app-3_1:5001 {
+http://127.0.0.1 {
+    reverse_proxy chat-app-1:3001 chat-app-2:4000 chat-app-3_1:5001 {
         header_down Strict-Transport-Security max-age=31536000
     }
 }
