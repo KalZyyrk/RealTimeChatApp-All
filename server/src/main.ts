@@ -30,8 +30,16 @@ if (!UPSTASH_REDIS_REST_URL) {
 }
 
 // Encrypted publisher new Redis(UPSTASH_REDIS_REST_URL, { tls: rejectUnauthorized: true })
-const publisher = new Redis(UPSTASH_REDIS_REST_URL);
-const subscriber = new Redis(UPSTASH_REDIS_REST_URL);
+const publisher = new Redis(UPSTASH_REDIS_REST_URL, {
+  tls: {
+    rejectUnauthorized: true,
+  },
+});
+const subscriber = new Redis(UPSTASH_REDIS_REST_URL, {
+  tls: {
+    rejectUnauthorized: true,
+  },
+});
 
 let connectedClients = 0;
 
